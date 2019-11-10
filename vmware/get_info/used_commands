@@ -1,0 +1,6 @@
+###### Put the site & the machine 
+
+ansible-playbook -l site enable_custom.yml --extra-vars "item=adm-cacti01-bdx1-pr" --ask-vault-pass -k
+
+
+##### If need to change notif of multiple machines, un-comment playbook & put required multiple machines in the brackets 
