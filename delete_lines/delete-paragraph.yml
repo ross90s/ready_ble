@@ -1,0 +1,13 @@
+- name: a play that runs entirely on the ansible host
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+   - name: Delete defination of un-wanted machines
+     raw: sed -i ':a;N;s/\n/&/4;Ta;/{{ item }}/!{P;D};:b;N;s/\n/&/6;Tb;d' sup_extra_god_cbv4.tpl   
+     with_items: [10.111.205.144,10.111.205.146,10.111.205.150,10.111.205.161,10.111.205.164,10.111.205.167,10.111.205.168,10.111.205.170,10.111.205.181]
+#  - name: check out a git repository
+#    replace:
+#     path: /home/rchivate/my-rc-hp/ansible/modify_files/sup_extra_god_cbv4.tpl
+#     regexp: '^127\.0\.0\.1'
+#     replace: 'Bye'
+#     backup: yes

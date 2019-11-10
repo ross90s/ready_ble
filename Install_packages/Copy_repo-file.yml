@@ -1,0 +1,12 @@
+---
+- hosts: all
+  remote_user: extprodpfs
+  become: yes
+  tasks:
+    - name: Copy template epel.repo file with owner and permissions
+      copy:
+        src: repo.conf
+        dest: /etc/yum.repos.d/epel.repo
+        owner: root
+        group: root
+        mode: '0644'

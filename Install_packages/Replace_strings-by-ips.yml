@@ -1,0 +1,58 @@
+---
+- hosts: all
+  remote_user: extprodpfs
+  become: yes
+  tasks:
+
+  - name: Replace server_address
+    replace:
+      dest: /etc/snmp/snmpd.conf
+      regexp: 'NAGIOS00'
+      replace: "{{ NAGIOS00 }}"
+      backup: yes
+
+  - name: Replace server_address
+    replace:
+      dest: /etc/snmp/snmpd.conf
+      regexp: 'NAGIOS01'
+      replace: "{{ NAGIOS01 }}"
+      backup: yes
+
+
+  - name: Replace server_address
+    replace:
+      dest: /etc/snmp/snmpd.conf
+      regexp: 'CACTI00'
+      replace: "{{ CACTI00 }}"
+      backup: yes
+  
+
+  - name: Replace server_address
+    replace:
+      dest: /etc/snmp/snmpd.conf
+      regexp: 'CACTI01'
+      replace: "{{ CACTI01 }}"
+      backup: yes
+
+  - name: Replace server_address
+    replace:
+      dest: /etc/snmp/snmpd.conf
+      regexp: 'CITY'
+      replace: "{{ CITY }}"
+      backup: yes
+
+
+  - name: Replace server_address
+    replace:
+      dest: /etc/nagios/nrpe.cfg
+      regexp: 'IP_OF_SERVER'            
+      replace: "{{ server_address }}"
+      backup: yes
+  
+ 
+  - name: Replace Nagios_addresses
+    replace:
+      dest: /etc/nagios/nrpe.cfg
+      regexp: 'IPS_OF_NAGIOS'
+      replace: "{{ nagios_address }}"
+      backup: yes

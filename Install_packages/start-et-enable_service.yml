@@ -1,0 +1,17 @@
+---
+- hosts: all
+  remote_user: extprodpfs
+  become: yes
+  tasks:
+
+  - name: Start service SNMPD, if not started
+    service:
+      name: snmpd
+      state: started
+      enabled: yes
+
+  - name: Start service NRPE, if not started
+    service:
+      name: nrpe
+      state: started
+      enabled: yes

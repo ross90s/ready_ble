@@ -1,0 +1,21 @@
+---
+- hosts: all
+  remote_user: extprodpfs
+  become: yes
+  tasks:
+    - name: Copy nrpe_demo
+      copy:
+        src: demo_nrpe.cfg
+        dest: /etc/nagios/nrpe.cfg
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Copy demo_snmpd.conf
+      copy:
+        src: demo_snmpd.conf
+        dest: /etc/snmp/snmpd.conf
+        owner: root
+        group: root
+        mode: '0644'
+     

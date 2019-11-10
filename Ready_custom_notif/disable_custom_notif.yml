@@ -1,0 +1,18 @@
+---
+- hosts: all
+  gather_facts: False
+  serial: 1
+  name: Execute a script.
+  remote_user: rchivate
+  #become: True
+  vars_files:
+    - pas.yml
+  tasks:
+     
+     - name: Enable all services of host
+       raw: curl -u rchivate:{{ ssh_pass }} -d "cmd_typ=29&cmd_mod=2&host={{ item }}&btnSubmit=Commit" "http://{{ inventory_hostname }}/nagios3/cgi-bin/cmd.cgi"   
+       with_items: [god-game00-cbv4-pr ,god-game01-cbv4-pr ,god-game06-cbv4-pr ,god-game08-cbv4-pr ,god-game09-cbv4-pr ,god-game10-cbv4-pr ,god-game12-cbv4-pr ,god-game13-cbv4-pr ,god-game14-cbv4-pr ,god-game15-cbv4-pr ,god-game16-cbv4-pr ,god-game17-cbv4-pr ,god-game18-cbv4-pr ,god-game19-cbv4-pr ,god-game20-cbv4-pr]   
+     
+     - name: Enable host notif
+       raw: curl -u rchivate:{{ ssh_pass }} -d "cmd_typ=25&cmd_mod=2&host={{ item }}&btnSubmit=Commit" "http://{{ inventory_hostname }}/nagios3/cgi-bin/cmd.cgi"
+       with_items: [god-game00-cbv4-pr ,god-game01-cbv4-pr ,god-game06-cbv4-pr ,god-game08-cbv4-pr ,god-game09-cbv4-pr ,god-game10-cbv4-pr ,god-game12-cbv4-pr ,god-game13-cbv4-pr ,god-game14-cbv4-pr ,god-game15-cbv4-pr ,god-game16-cbv4-pr ,god-game17-cbv4-pr ,god-game18-cbv4-pr ,god-game19-cbv4-pr ,god-game20-cbv4-pr]

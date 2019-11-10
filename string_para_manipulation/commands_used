@@ -1,0 +1,5 @@
+Take backup of the file:
+
+script delete the paragraph after finding the strings and then also delete the specified strings .
+
+ansible-playbook delete-para-et-strings.yml

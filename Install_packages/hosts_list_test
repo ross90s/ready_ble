@@ -1,0 +1,10 @@
+
+[abv1]
+
+abv1-nadm-local02  server_address='10.111.193.111'  nagios_address='10.111.193.39,10.111.193.47' NAGIOS00='10.111.193.39' NAGIOS01='10.111.193.47'  CACTI00='10.111.193.47' CACTI01='10.111.193.40' CITY='abv1'
+                                                                                                 
+                                                                                                 
+[mrs1]                                                                                           
+                                                                                                 
+mrs1-nadm-local02  server_address='10.111.206.70'   nagios_address='10.111.206.60,10.111.206.7'  NAGIOS00='10.111.193.39' NAGIOS01='10.111.206.60'  CACTI00='10.111.193.39' CACTI01='10.111.206.61' CITY='mrs1'
+

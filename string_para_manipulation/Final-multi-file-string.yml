@@ -1,0 +1,14 @@
+---
+
+- name: a play that runs entirely on the ansible host
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: Ansible multiple replace example
+    replace:
+      path: "{{ item.path }}"
+      regexp: "{{ item.regexp1 }}"
+      replace: "{{ item.replace }}"
+    with_items:
+      - { path: 'sup_extra_god_cbv4.tpl', regexp1: 'god-game05-cbv4-pr', replace: '10.10.111.123'}
+      - { path: 'sup_extra_god_cbv4_without_def', regexp1: 'god-game07-cbv4-pr', replace: '10.10.111.100'}

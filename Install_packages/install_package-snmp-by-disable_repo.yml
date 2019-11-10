@@ -1,0 +1,14 @@
+---
+- hosts: all
+  remote_user: extprodpfs
+  become: yes
+  tasks:
+    - name: Install Packages 
+      yum:
+        name:
+          - nano
+          - net-snmp
+          - net-snmp-utils
+        #disablerepo: "env-ext-java1.8-sun-yss,env-ext-mongodb3.2-yss,env-ext-postgresql9.6-yss,env-ext-tomcat7.0-yss,ext-jbossas10-yss,ext-yss,extras,prod-yss,ptin-yss,sol-misc-yss,updates"
+        enablerepo: base
+        state: present

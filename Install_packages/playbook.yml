@@ -1,0 +1,122 @@
+---
+- hosts: all
+  remote_user: extprodpfs
+  become: yes
+  tasks:
+    - name: Install Packages snmp
+      yum:
+        name:
+          - nano
+          - net-snmp
+          - net-snmp-utils
+        #disablerepo: "env-ext-java1.8-sun-yss,env-ext-mongodb3.2-yss,env-ext-postgresql9.6-yss,env-ext-tomcat7.0-yss,ext-jbossas10-yss,ext-yss,extras,prod-yss,pti$
+        enablerepo: base
+        state: present
+    
+    - name: Install EPEL repo. 
+      yum:
+        name: epel-release
+        state: present
+  
+    - name: Copy template epel.repo file with owner and permissions
+      copy:
+        src: repo.conf
+        dest: /etc/yum.repos.d/epel.repo
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Install Packages 
+      yum:
+        name:
+          - nrpe 
+          - nagios-plugins-users 
+          - nagios-plugins-load 
+          - nagios-plugins-swap 
+          - nagios-plugins-disk 
+          - nagios-plugins-procs
+
+        #disablerepo: "env-ext-java1.8-sun-yss,env-ext-mongodb3.2-yss,env-ext-postgresql9.6-yss,env-ext-tomcat7.0-yss,ext-jbossas10-yss,ext-yss,extras,prod-yss,ptin-yss,sol-misc-yss,updates"
+        enablerepo: epel
+        state: present
+
+    - name: Copy nrpe_demo
+      copy:
+        src: demo_nrpe.cfg
+        dest: /etc/nagios/nrpe.cfg
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Copy demo_snmpd.conf
+      copy:
+        src: demo_snmpd.conf
+        dest: /etc/snmp/snmpd.conf
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Replace nagios00_address_in SNMPD.conf
+      replace:
+        dest: /etc/snmp/snmpd.conf
+        regexp: 'NAGIOS00'
+        replace: "{{ NAGIOS00 }}"
+        backup: yes		
+
+    - name: Replace nagios01_address_in SNMPD.conf
+      replace:
+        dest: /etc/snmp/snmpd.conf
+        regexp: 'NAGIOS01'
+        replace: "{{ NAGIOS01 }}"
+        backup: yes
+
+
+    - name: Replace CACTI00_address_in SNMPD.conf
+      replace:
+        dest: /etc/snmp/snmpd.conf
+        regexp: 'CACTI00'
+        replace: "{{ CACTI00 }}"
+        backup: yes
+  
+
+    - name: CACTI01_address_in SNMPD.conf
+      replace:
+        dest: /etc/snmp/snmpd.conf
+        regexp: 'CACTI01'
+        replace: "{{ CACTI01 }}"
+        backup: yes
+
+    - name: Replace SITE in SNMPD.conf
+      replace:
+        dest: /etc/snmp/snmpd.conf
+        regexp: 'CITY'
+        replace: "{{ CITY }}"
+        backup: yes
+
+
+    - name: Replace SErver address in nrpe.conf 
+      replace:
+        dest: /etc/nagios/nrpe.cfg
+        regexp: 'IP_OF_SERVER'            
+        replace: "{{ server_address }}"
+        backup: yes
+  
+ 
+    - name: Replace Nagioss address in nrpe.conf
+      replace:
+        dest: /etc/nagios/nrpe.cfg
+        regexp: 'IPS_OF_NAGIOS'
+        replace: "{{ nagios_address }}"
+        backup: yes
+
+    - name: Start service SNMPD, if not started
+      service:
+        name: snmpd
+        state: started
+        enabled: yes
+
+    - name: Start service NRPE, if not started
+      service:
+        name: nrpe
+        state: started
+        enabled: yes

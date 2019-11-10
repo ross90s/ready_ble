@@ -1,0 +1,5 @@
+abv1-nadm-ssl00         server_address='10.111.193.107'         nagios_address='10.111.193.47,10.111.193.39'            NAGIOS00='10.111.193.47'                NAGIOS01='10.111.193.39'            CACTI00='10.111.193.48'         CACTI01='10.111.193.40'         CITY='abv1'
+abv1-nadm-pgsql01               server_address='10.111.193.121'         nagios_address='10.111.193.47,10.111.193.39'            NAGIOS00='10.111.193.47'           NAGIOS01='10.111.193.39'         CACTI00='10.111.193.48'         CACTI01='10.111.193.40'         CITY='abv1'
+
+
+

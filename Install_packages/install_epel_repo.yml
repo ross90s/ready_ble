@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: extprodpfs
+  become: yes
+  tasks:
+    - name: Install EPEL repo. 
+      yum:
+        name: epel-release
+        state: present
+      register: result

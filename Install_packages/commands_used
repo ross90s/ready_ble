@@ -1,0 +1,10 @@
+ansible-playbook -u extprodpfs install_package-disable_repo.yml -k -K
+
+small k is foe ssh
+Big K is for sudo password
+
+
+ansible-playbook -u extprodpfs playbook.yml  -k -K
+
+
+ansible-playbook -u extprodpfs Replace_string-by-ip.yml -k -K
