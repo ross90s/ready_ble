@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: False
+  serial: 1
+  name: testing check 
+  remote_user: rchivate
+  become: True
+  #vars_files:
+  #  - pas.yml
+  tasks:
+     
+     - name: Command check
+       raw: /usr/lib/nagios/plugins/check_nrpe -H {{ item }} -c check_load -a 0,0,0 8,8,8
+       with_items: [10.111.206.66,10.111.206.67,10.111.206.68,10.111.206.69,10.111.206.70,10.111.206.71]
