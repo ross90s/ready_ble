@@ -1,0 +1,2 @@
+10.111.200.8  inventory_hostname=adm-cacti00-sbg1-pr  prefix=adm master=cacti indice=' 00'  
+10.111.200.88  inventory_hostname=adm-cacti01-sbg1-pr  prefix=adm master=cacti indice=' 01'

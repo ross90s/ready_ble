@@ -1,0 +1,3 @@
+ansible_host=pfds-deploy00-bdx1-pr          
+ansible_host=adm-logger00-bdx1-pr           
+ansible_host=adm-lvs00-bdx1-pr

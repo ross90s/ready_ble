@@ -1,0 +1,264 @@
+adm-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-cacti01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-svcc01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-svcc00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-cacti00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-lvs00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-nagios00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-ldap00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-lvs01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-nagios01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-ldap01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+evovod-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+baraka-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+adm-logger00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+ncdn-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+ipv6-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+lvs-tps-bib1-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+idur-tps-ref2-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+dhcpv6-02-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+serpe-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prov-rad-ent-01-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+radent-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+rad-virt-01-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+wifi-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+wifi-redis01-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+dhcp-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-dsl-rbk1-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-dsl-rbk2-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+evovod-stream06-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+wifi-gwsim04-rns1-pr | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Authentication failure.", 
+    "unreachable": true
+}
+prx-dsl-rbk3-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-dsl-isu1-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-dsl-isu2-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-dsl-dop1-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-bd-mut1-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-dsl-glt1-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-dsl-5600t2-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-wifi-mut1-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+pfds-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+osbd-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-deploy00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-dsl-glt2-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-dsl-5600t1-rns1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+prx-cptl-rns1 | FAILED! => {
+    "changed": false, 
+    "module_stderr": "Shared connection to prx-cptl-rns1 closed.\r\n", 
+    "module_stdout": "/bin/sh: 1: /usr/bin/python: not found\r\n", 
+    "msg": "MODULE FAILURE", 
+    "rc": 127
+}
+cobra-kvmstreams01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-kvmstreams03-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+ibmstreams03 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+ibmstreamsadm01 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+ibmstreamsdev | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-kafka01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-kafka03-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-cass05-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+ibmstreams01 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-cass09-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-srvapp01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-cass03-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-cass01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-mdbconfig00-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-mdbshr2r1-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-cass07-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-cass11-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-mdbconfig02-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-mdbshr1r2-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-mdbshr1r0-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+cobra-lvs01-ren1-pr | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}

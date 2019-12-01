@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: False
+  serial: 1
+  name: Execute a script.
+  #remote_user: rchivate
+  become: True
+  tasks:
+     - name: Gen conf of all INVENTORY
+       delegate_to: 10.111.198.4
+       raw: generateconf.pl {{ inventory_hostname }}

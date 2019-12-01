@@ -1,0 +1,15 @@
+---
+- hosts: all
+  gather_facts: False
+  serial: 1
+  name: Execute a script.
+  #remote_user: rchivate
+  become: True
+  tasks:
+     - name: Gen conf on deployer
+       delegate_to: 10.111.199.4
+       raw: generateconf.pl {{ inventory_hostname }}
+       
+
+     - name: Run the certificate on target
+       raw: curl -s http://10.111.199.4/respfile/ren1/{{ prefix }}/pr/{{ master }}/{{ indice|trim  }}/gen_puppet.sh |bash /dev/stdin

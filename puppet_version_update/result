@@ -1,0 +1,35 @@
+adm-ldap00-sbg1-pr | SUCCESS | rc=0 >>
+
+[0;32minfo: Caching catalog for adm-ldap00-sbg1-pr.adm.pr.adm.sbg1.pfs.ld[0m
+--
+adm-lvs00-sbg1-pr | SUCCESS | rc=0 >>
+
+[0;32minfo: Caching catalog for adm-lvs00-sbg1-pr.adm.pr.adm.sbg1.pfs.ld[0m
+--
+adm-lvs01-sbg1-pr | SUCCESS | rc=0 >>
+
+[0;32minfo: Caching catalog for adm-lvs01-sbg1-pr.adm.pr.adm.sbg1.pfs.ld[0m
+--
+adm-svcc01-sbg1-pr | SUCCESS | rc=0 >>
+
+[0;32minfo: Caching catalog for adm-svcc01-sbg1-pr.adm.pr.adm.sbg1.pfs.ld[0m
+--
+adm-svcc00-sbg1-pr | SUCCESS | rc=0 >>
+
+[0;32minfo: Caching catalog for adm-svcc00-sbg1-pr.adm.pr.adm.sbg1.pfs.ld[0m
+--
+adm-nfs-sbg1-pr | SUCCESS | rc=0 >>
+
+[0;32minfo: Caching catalog for adm-nfs-sbg1-pr.adm.pr.adm.sbg1.pfs.ld[0m
+--
+adm-nocsmok01-sbg1-pr | SUCCESS | rc=0 >>
+
+[0;32minfo: Caching catalog for adm-nocsmok01-sbg1-pr.adm.pr.adm.sbg1.pfs.ld[0m
+--
+adm-logger00-sbg1-pr | SUCCESS | rc=0 >>
+
+
+--
+adm-ldap01-sbg1-pr | SUCCESS | rc=0 >>
+
+[0;32minfo: Caching catalog for adm-ldap01-sbg1-pr.adm.pr.adm.sbg1.pfs.ld[0m

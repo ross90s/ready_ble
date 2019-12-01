@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: False
+  name: Execute a script.
+  #remote_user: rchivate
+  become: True
+  tasks:
+     - name: Create test file
+       raw: update-rs4>/homes/rchivate/update_result 

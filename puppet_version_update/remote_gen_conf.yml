@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: False
+  serial: 1
+  name: Generating conf of the INVENTORY
+  #remote_user: rchivate
+  become: True
+  tasks:
+     - name: Gen Conf
+       raw: generateconf.pl {{ gen_host }} 

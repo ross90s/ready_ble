@@ -1,0 +1,193 @@
+cobra-kvmstreams01-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-kvmstreams01-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149859'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Apt::Sources_listd[influxdata]/File[/etc/apt/sources.list.d/influxdata.list]/ensure: current_value absent, should be file (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Apt::Sources_listd[influxdata]/File[/etc/apt/sources.list.d/influxdata.list]: Scheduling refresh of Exec[apt-get_update_influxdata][0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Apt::Sources_listd[influxdata]/File[/etc/apt/sources.list.d/influxdata.list]: Scheduling refresh of Exec[apt-get_update_influxdata][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Apt::Sources_listd[influxdata]/Exec[apt-get_update_influxdata]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Apt::Sources_listd[influxdata]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Package[telegraf]/ensure: current_value purged, should be present (noop)[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/ensure: current_value absent, should be file (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Unscheduling refresh on Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/File[key_repo_influxdata]/ensure: current_value absent, should be file (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/File[key_repo_influxdata]: Scheduling refresh of Exec[add_key_repo_influxdata][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/Exec[add_key_repo_influxdata]: Would have triggered 'refresh' from 1 events[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/Exec[add_key_repo_influxdata]: Scheduling refresh of Exec[apt_get_update_repo_influxdata][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/Exec[apt_get_update_repo_influxdata]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Cobra::Common::Add_gpg_key[repo_influxdata]: Would have triggered 'refresh' from 3 events[0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 5 events[0m
+[mNotice: /Stage[main]/Cobra::Pr::Kvmstreams::Kvm/Exec[create_vm_ibmstreams01]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Cobra::Pr::Kvmstreams::Kvm]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 2.19 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-kvmstreams01-ren1-pr closed.
+
+cobra-kvmstreams03-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-kvmstreams03-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149860'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Apt::Sources_listd[influxdata]/File[/etc/apt/sources.list.d/influxdata.list]/ensure: current_value absent, should be file (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Apt::Sources_listd[influxdata]/File[/etc/apt/sources.list.d/influxdata.list]: Scheduling refresh of Exec[apt-get_update_influxdata][0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Apt::Sources_listd[influxdata]/File[/etc/apt/sources.list.d/influxdata.list]: Scheduling refresh of Exec[apt-get_update_influxdata][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Apt::Sources_listd[influxdata]/Exec[apt-get_update_influxdata]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Apt::Sources_listd[influxdata]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Package[telegraf]/ensure: current_value purged, should be present (noop)[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/ensure: current_value absent, should be file (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Unscheduling refresh on Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/File[key_repo_influxdata]/ensure: current_value absent, should be file (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/File[key_repo_influxdata]: Scheduling refresh of Exec[add_key_repo_influxdata][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/Exec[add_key_repo_influxdata]: Would have triggered 'refresh' from 1 events[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/Exec[add_key_repo_influxdata]: Scheduling refresh of Exec[apt_get_update_repo_influxdata][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Cobra::Common::Add_gpg_key[repo_influxdata]/Exec[apt_get_update_repo_influxdata]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Cobra::Common::Add_gpg_key[repo_influxdata]: Would have triggered 'refresh' from 3 events[0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 5 events[0m
+[mNotice: /Stage[main]/Cobra::Pr::Kvmstreams::Kvm/Exec[create_vm_ibmstreamsdev]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: /Stage[main]/Cobra::Pr::Kvmstreams::Kvm/Exec[create_vm_ibmstreams03]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Cobra::Pr::Kvmstreams::Kvm]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 2.67 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-kvmstreams03-ren1-pr closed.
+
+cobra-kafka01-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-kafka01-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149858'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Finished catalog run in 2.56 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-kafka01-ren1-pr closed.
+
+cobra-kafka03-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-kafka03-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149857'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Kafka/Sysctl::Sysctld[kafka]/File[/etc/sysctl.d/kafka.conf]/content: 
+--- /etc/sysctl.d/kafka.conf	2018-05-14 00:13:57.044477753 +0200
++++ /tmp/user/0/puppet-file20180524-42759-18m8al2	2018-05-24 10:17:53.509682767 +0200
+@@ -1,3 +1,8 @@
+-# Genere par puppet
++# Tuning système pour Kafka 
++# Fichier géré par Puppet - ne pas modifier
++
++# Desactivation swap
+ vm.swappiness = 0
++
++# Augmentation du nombre de memory map par appli (eviter OOM JMV)
+ vm.max_map_count = 262144
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Kafka/Sysctl::Sysctld[kafka]/File[/etc/sysctl.d/kafka.conf]/content: current_value {md5}d5d54db9cbd2a7d065e2cb021b9881b1, should be {md5}d8afb3f319db6b194337aaf3db2d7961 (noop)[0m
+[mNotice: /Stage[main]/Cobra::Common::Kafka/File[/etc/kafka/server.properties]/content: 
+--- /etc/kafka/server.properties	2018-04-24 14:42:33.549570316 +0200
++++ /tmp/user/0/puppet-file20180524-42759-rb3iak	2018-05-24 10:17:54.085682938 +0200
+@@ -112,7 +112,7 @@
+ # then the feature to collect and report support metrics
+ # ("Metrics") is enabled.  If set to false, the feature is disabled.
+ #
+-confluent.support.metrics.enable=true
++confluent.support.metrics.enable=false
+ 
+ # The customer ID under which support metrics will be collected and
+ # reported.
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Kafka/File[/etc/kafka/server.properties]/content: current_value {md5}5f197ad33835808d2751f711c9b21247, should be {md5}98c6bd5970b46af19472d73cf29550cb (noop)[0m
+[mNotice: Sysctl::Sysctld[kafka]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Cobra::Common::Kafka]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Finished catalog run in 2.63 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-kafka03-ren1-pr closed.
+

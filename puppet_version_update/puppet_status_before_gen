@@ -1,0 +1,1018 @@
+ibmstreamsadm01 | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for ibmstreamsadm01.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149116'[0m
+[mNotice: Finished catalog run in 4.15 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to ibmstreamsadm01 closed.
+
+ibmstreamsdev | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for ibmstreamsdev.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149121'[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Package[telegraf]/ensure: current_value absent, should be present (noop)[0m
+[mNotice: /Stage[main]/Recette/File[/usr/local/bin/recette]/content: 
+--- /usr/local/bin/recette	2017-11-29 16:04:35.947000000 +0100
++++ /tmp/puppet-file20180524-26931-1kgkpl	2018-05-24 10:05:42.092141669 +0200
+@@ -8,7 +8,7 @@
+ #============================================================================================================
+ # Auteur : JLE
+ # Date   : 12/06/2013 
+-# But    : Recette de la machine cobra-ibmstreamsdev-ren1-pr par le Deployeur RS4 adm-deploy00-ren1-pr.adm.pr.adm.ren1.pfs.ld de ren1
++# But    : Recette de la machine ibmstreamsdev par le Deployeur RS4 adm-deploy00-ren1-pr.adm.pr.adm.ren1.pfs.ld de ren1
+ #============================================================================================================
+ use strict;
+ use warnings;
+[0m
+[mNotice: /Stage[main]/Recette/File[/usr/local/bin/recette]/content: current_value {md5}dbf0861d446cc1a0daafedd3a9e155d0, should be {md5}fbc7e3d42d2139424363f57fa4502d8c (noop)[0m
+[mNotice: /Stage[main]/Motd/File[/etc/motd]/content: 
+--- /etc/motd	2017-11-29 16:04:35.999000000 +0100
++++ /tmp/puppet-file20180524-26931-swb5x9	2018-05-24 10:05:42.112141669 +0200
+@@ -21,7 +21,7 @@
+ -------------------------------------------------------------------------
+ PROJECT   	: DIAG 
+ MASTER	  	: ibmstreamsdev
+-HOSTNAME  	: cobra-ibmstreamsdev-ren1-pr
++HOSTNAME  	: ibmstreamsdev
+ OS	  	: centos/7
+ DESCRIPTION	: ibmstreamsdev
+ LOCATION  	: ren1
+[0m
+[mNotice: /Stage[main]/Motd/File[/etc/motd]/content: current_value {md5}87f475023ef89eecb3aa5192a77b4088, should be {md5}80124992f09fb23efe4e836ad195da56 (noop)[0m
+[mNotice: Class[Motd]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Smtp/File[/etc/postfix/main.cf]/content: 
+--- /etc/postfix/main.cf	2017-11-29 16:04:36.382000000 +0100
++++ /tmp/puppet-file20180524-26931-zp1n12	2018-05-24 10:05:42.135141669 +0200
+@@ -8,11 +8,11 @@
+ debug_peer_level = 2
+ biff = no
+ append_dot_mydomain = no
+-myhostname = cobra-ibmstreamsdev-ren1-pr
++myhostname = ibmstreamsdev
+ alias_maps = hash:/etc/aliases
+ alias_database = hash:/etc/aliases
+ myorigin = $myhostname
+-mydestination = cobra-ibmstreamsdev-ren1-pr.adm.pr.cobra.ren1.pfs.ld, cobra-ibmstreamsdev-ren1-pr, localhost.localdomain, localhost
++mydestination = ibmstreamsdev.adm.pr.cobra.ren1.pfs.ld, ibmstreamsdev, localhost.localdomain, localhost
+ relayhost = 10.111.215.5
+ mynetworks = 127.0.0.0/8
+ mailbox_size_limit = 0
+[0m
+[mNotice: /Stage[main]/Smtp/File[/etc/postfix/main.cf]/content: current_value {md5}c9599c2e72b52f3b718506c28f632cd0, should be {md5}7b597fe6abafc7b8f4139d8b1289ab5d (noop)[0m
+[0;32mInfo: /Stage[main]/Smtp/File[/etc/postfix/main.cf]: Scheduling refresh of Service[postfix][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/ensure: current_value absent, should be file (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: Class[Recette]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Smtp/Service[postfix]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Smtp]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Unscheduling refresh on Service[telegraf][0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 3 events[0m
+[mNotice: /Stage[main]/Hosts/File[/etc/hosts]/content: 
+--- /etc/hosts	2018-03-12 22:36:50.594267583 +0100
++++ /tmp/puppet-file20180524-26931-1hwqp8u	2018-05-24 10:05:44.910141637 +0200
+@@ -6,7 +6,7 @@
+ ###############################################################################
+ 
+ 127.0.0.1       	localhost
+-10.111.199.171    	cobra-ibmstreamsdev-ren1-pr.adm.pr.cobra.ren1.pfs.ld cobra-ibmstreamsdev-ren1-pr.adm
++10.111.199.171    	ibmstreamsdev.adm.pr.cobra.ren1.pfs.ld ibmstreamsdev.adm
+ 10.111.199.4		adm-deploy00-ren1-pr.adm.pr.adm.ren1.pfs.ld
+ 
+ 10.111.215.155		ibmstreamsdev
+[0m
+[mNotice: /Stage[main]/Hosts/File[/etc/hosts]/content: current_value {md5}c1917f0d6760c39becd77b6c23a23046, should be {md5}171a7320de38a3f2114ab62cd3888eb6 (noop)[0m
+[mNotice: Class[Hosts]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Eth/File[/etc/sysconfig/network]/content: 
+--- /etc/sysconfig/network	2017-11-29 16:05:57.083000000 +0100
++++ /tmp/puppet-file20180524-26931-ylv6lr	2018-05-24 10:05:44.970141636 +0200
+@@ -6,4 +6,4 @@
+ ##############################################################################
+ NETWORKING=yes
+ NOZEROCONF=yes
+-HOSTNAME=cobra-ibmstreamsdev-ren1-pr
++HOSTNAME=ibmstreamsdev
+[0m
+[mNotice: /Stage[main]/Eth/File[/etc/sysconfig/network]/content: current_value {md5}118d80a1fb8b07b3932f944f7544eb03, should be {md5}e884a74f40bbb7d3cbc3f7bcd0ec813c (noop)[0m
+[mNotice: Class[Eth]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 6 events[0m
+[mNotice: Finished catalog run in 4.08 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to ibmstreamsdev closed.
+
+cobra-srvapp01-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-srvapp01-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149133'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Zookeeper/Service[zookeeper]/enable: current_value false, should be true (noop)[0m
+[mNotice: /Stage[main]/Cobra::Common::Docker/File[/u0/docker]/mode: current_value 0711, should be 0755 (noop)[0m
+[mNotice: Class[Cobra::Common::Docker]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Cobra::Common::Zookeeper]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 2.28 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-srvapp01-ren1-pr closed.
+
+ibmstreams01 | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for ibmstreams01.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149124'[0m
+[mNotice: /Stage[main]/Cobra::Common::Ibmstreams/Pam::Limitsd[ibmstreams]/File[/etc/security/limits.d/ibmstreams.conf]/content: 
+--- /etc/security/limits.d/ibmstreams.conf	2018-05-15 18:29:09.324101353 +0200
++++ /tmp/puppet-file20180524-811-ly0y5w	2018-05-24 10:05:44.482568614 +0200
+@@ -1,20 +1,12 @@
+ # Genere par puppet
+ # Ressources illimitées pour user streamsadmin
+ 
+-#@streamsadmin	-	nofile	100000
+-#@streamsadmin	-	nproc	100000
+-#@streamsadmin	-	as		-1
+-#@streamsadmin	-	data	-1
+-#@streamsadmin	-	rss		-1
+-#@streamsadmin	-	stack	-1
+-#@streamsadmin	-	memlock	-1
+-#root			-	nofile	100000
+-#root			-	nproc	100000
+-
+-*	soft	nproc	500000
+-*	hard	nproc	1000000
+-*	soft	sigpending	100000
+-*	hard	sigpending	100000
+-*	-	nofile	1000000
+-root	-	nofile	1000000
+-
++@streamsadmin	-	nofile	100000
++@streamsadmin	-	nproc	100000
++@streamsadmin	-	as		-1
++@streamsadmin	-	data	-1
++@streamsadmin	-	rss		-1
++@streamsadmin	-	stack	-1
++@streamsadmin	-	memlock	-1
++root			-	nofile	100000
++root			-	nproc	100000
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Ibmstreams/Pam::Limitsd[ibmstreams]/File[/etc/security/limits.d/ibmstreams.conf]/content: current_value {md5}a438a6b62e534297d89b57ecebc5439c, should be {md5}f6c6bdc3fca256d91924441b4d566fea (noop)[0m
+[mNotice: Pam::Limitsd[ibmstreams]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Cobra::Common::Ibmstreams]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Finished catalog run in 5.64 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to ibmstreams01 closed.
+
+ibmstreams03 | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for ibmstreams03.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149124'[0m
+[mNotice: /Stage[main]/Cobra::Common::Ibmstreams/Pam::Limitsd[ibmstreams]/File[/etc/security/limits.d/ibmstreams.conf]/content: 
+--- /etc/security/limits.d/ibmstreams.conf	2018-05-15 18:29:44.668898086 +0200
++++ /tmp/puppet-file20180524-4340-m45b88	2018-05-24 10:05:52.673899219 +0200
+@@ -1,20 +1,12 @@
+ # Genere par puppet
+ # Ressources illimitées pour user streamsadmin
+ 
+-#@streamsadmin	-	nofile	100000
+-#@streamsadmin	-	nproc	100000
+-#@streamsadmin	-	as		-1
+-#@streamsadmin	-	data	-1
+-#@streamsadmin	-	rss		-1
+-#@streamsadmin	-	stack	-1
+-#@streamsadmin	-	memlock	-1
+-#root			-	nofile	100000
+-#root			-	nproc	100000
+-#
+-*	soft	nproc	500000
+-*	hard	nproc	1000000
+-*	soft	sigpending	100000
+-*	hard	sigpending	100000
+-*	-	nofile	1000000
+-root	-	nofile	1000000
+-
++@streamsadmin	-	nofile	100000
++@streamsadmin	-	nproc	100000
++@streamsadmin	-	as		-1
++@streamsadmin	-	data	-1
++@streamsadmin	-	rss		-1
++@streamsadmin	-	stack	-1
++@streamsadmin	-	memlock	-1
++root			-	nofile	100000
++root			-	nproc	100000
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Ibmstreams/Pam::Limitsd[ibmstreams]/File[/etc/security/limits.d/ibmstreams.conf]/content: current_value {md5}62a060ed0b93aa44cb2fa27a03a6cefc, should be {md5}f6c6bdc3fca256d91924441b4d566fea (noop)[0m
+[mNotice: Pam::Limitsd[ibmstreams]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Cobra::Common::Ibmstreams]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Finished catalog run in 12.60 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to ibmstreams03 closed.
+
+cobra-cass03-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-cass03-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149116'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2018-02-20 11:53:54.547221989 +0100
++++ /tmp/user/0/puppet-file20180524-6181-1wk39br	2018-05-24 10:05:59.487363179 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+@@ -67,10 +67,10 @@
+ 
+ # Configuration vers InfluxDB
+ [[outputs.influxdb]]
+-  # Serveur InfluxDB (port 8089 pour UDP)
+-  urls = ["udp://influxdb.diag.sfr.net:8089"] # required
++  # Serveur InfluxDB (port 19002 pour UDP/db cobra)
++  urls = ["udp://influxdb.cobra.diag.sfr.net:19002"] # required
+   # Database
+-  database = "sup_diag" # required
++  database = "cobra" # required
+ 
+   ## Retention policy to write to. Empty string writes to the default rp.
+   retention_policy = ""
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}d02e9324bcc4e1e97c07be2d7a6d0f62, should be {md5}7fa1d154078f45e2c01186907984e955 (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]: Unscheduling refresh on Service[setreadahead][0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]: Unscheduling refresh on Service[disablethpdefrag][0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Cassandra]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.99 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-cass03-ren1-pr closed.
+
+cobra-cass09-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-cass09-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149121'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2017-11-15 11:22:49.648863308 +0100
++++ /tmp/user/0/puppet-file20180524-31798-kr1v04	2018-05-24 10:06:11.428254813 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+@@ -67,10 +67,10 @@
+ 
+ # Configuration vers InfluxDB
+ [[outputs.influxdb]]
+-  # Serveur InfluxDB (port 8089 pour UDP)
+-  urls = ["udp://influxdb.diag.sfr.net:8089"] # required
++  # Serveur InfluxDB (port 19002 pour UDP/db cobra)
++  urls = ["udp://influxdb.cobra.diag.sfr.net:19002"] # required
+   # Database
+-  database = "sup_diag" # required
++  database = "cobra" # required
+ 
+   ## Retention policy to write to. Empty string writes to the default rp.
+   retention_policy = ""
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}720d6ecca487d9df75a37e342f79e582, should be {md5}9ec28c173b17857636b3f42dd72ade4b (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]: Unscheduling refresh on Service[setreadahead][0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]: Unscheduling refresh on Service[disablethpdefrag][0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Cassandra]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.42 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-cass09-ren1-pr closed.
+
+cobra-cass01-ren1-pr | SUCCESS | rc=0 >>
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-cass01-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149116'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2017-12-12 11:16:10.433739579 +0100
++++ /tmp/user/0/puppet-file20180524-10205-1bnirx1	2018-05-24 10:06:11.061530642 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+@@ -67,10 +67,10 @@
+ 
+ # Configuration vers InfluxDB
+ [[outputs.influxdb]]
+-  # Serveur InfluxDB (port 8089 pour UDP)
+-  urls = ["udp://influxdb.diag.sfr.net:8089"] # required
++  # Serveur InfluxDB (port 19002 pour UDP/db cobra)
++  urls = ["udp://influxdb.cobra.diag.sfr.net:19002"] # required
+   # Database
+-  database = "sup_diag" # required
++  database = "cobra" # required
+ 
+   ## Retention policy to write to. Empty string writes to the default rp.
+   retention_policy = ""
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}e95d819d8ec9ec66489e2f7375c5869e, should be {md5}502315bfc00bde16c023d2466fd4901c (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]: Unscheduling refresh on Service[setreadahead][0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]: Unscheduling refresh on Service[disablethpdefrag][0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Cassandra]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.97 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-cass01-ren1-pr closed.
+
+cobra-cass05-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-cass05-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149124'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2017-10-17 15:56:19.318287921 +0200
++++ /tmp/user/0/puppet-file20180524-11883-18e3hcf	2018-05-24 10:06:12.135389259 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+@@ -67,10 +67,10 @@
+ 
+ # Configuration vers InfluxDB
+ [[outputs.influxdb]]
+-  # Serveur InfluxDB (port 8089 pour UDP)
+-  urls = ["udp://influxdb.diag.sfr.net:8089"] # required
++  # Serveur InfluxDB (port 19002 pour UDP/db cobra)
++  urls = ["udp://influxdb.cobra.diag.sfr.net:19002"] # required
+   # Database
+-  database = "sup_diag" # required
++  database = "cobra" # required
+ 
+   ## Retention policy to write to. Empty string writes to the default rp.
+   retention_policy = ""
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}99dcde391a443c3567892998eb23d680, should be {md5}488ffc19983dba798bf280ec260d0068 (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]: Unscheduling refresh on Service[setreadahead][0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]: Unscheduling refresh on Service[disablethpdefrag][0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Cassandra]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.98 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-cass05-ren1-pr closed.
+
+cobra-cass07-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-cass07-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149124'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2017-10-26 14:18:54.196015422 +0200
++++ /tmp/user/0/puppet-file20180524-19595-labm6u	2018-05-24 10:06:12.303062805 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+@@ -67,10 +67,10 @@
+ 
+ # Configuration vers InfluxDB
+ [[outputs.influxdb]]
+-  # Serveur InfluxDB (port 8089 pour UDP)
+-  urls = ["udp://influxdb.diag.sfr.net:8089"] # required
++  # Serveur InfluxDB (port 19002 pour UDP/db cobra)
++  urls = ["udp://influxdb.cobra.diag.sfr.net:19002"] # required
+   # Database
+-  database = "sup_diag" # required
++  database = "cobra" # required
+ 
+   ## Retention policy to write to. Empty string writes to the default rp.
+   retention_policy = ""
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}b9d58de0195de1f1a60c22ac89336f49, should be {md5}10208d0c4887fbf45ab0a20ed13cfffd (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]: Unscheduling refresh on Service[setreadahead][0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]: Unscheduling refresh on Service[disablethpdefrag][0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Cassandra]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.89 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-cass07-ren1-pr closed.
+
+cobra-cass11-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-cass11-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149179'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2017-11-15 14:20:29.776135063 +0100
++++ /tmp/user/0/puppet-file20180524-25324-4ujdb9	2018-05-24 10:06:29.655376354 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+@@ -67,10 +67,10 @@
+ 
+ # Configuration vers InfluxDB
+ [[outputs.influxdb]]
+-  # Serveur InfluxDB (port 8089 pour UDP)
+-  urls = ["udp://influxdb.diag.sfr.net:8089"] # required
++  # Serveur InfluxDB (port 19002 pour UDP/db cobra)
++  urls = ["udp://influxdb.cobra.diag.sfr.net:19002"] # required
+   # Database
+-  database = "sup_diag" # required
++  database = "cobra" # required
+ 
+   ## Retention policy to write to. Empty string writes to the default rp.
+   retention_policy = ""
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}6c77c2cae5f0a14f4ebd8d01b26bb0b9, should be {md5}65a71db76279239f47504a04c3808fbf (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[setreadahead]: Unscheduling refresh on Service[setreadahead][0m
+[mNotice: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Cassandra/Service[disablethpdefrag]: Unscheduling refresh on Service[disablethpdefrag][0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Cassandra]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.61 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-cass11-ren1-pr closed.
+
+cobra-mdbconfig02-ren1-pr | SUCCESS | rc=0 >>
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-mdbconfig02-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149183'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]: Unscheduling refresh on Service[disablethp][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2017-11-10 11:08:23.395579891 +0100
++++ /tmp/user/0/puppet-file20180524-23294-1h6f0p6	2018-05-24 10:06:32.871544761 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+@@ -67,10 +67,10 @@
+ 
+ # Configuration vers InfluxDB
+ [[outputs.influxdb]]
+-  # Serveur InfluxDB (port 8089 pour UDP)
+-  urls = ["udp://influxdb.diag.sfr.net:8089"] # required
++  # Serveur InfluxDB (port 19002 pour UDP/db cobra)
++  urls = ["udp://influxdb.cobra.diag.sfr.net:19002"] # required
+   # Database
+-  database = "sup_diag" # required
++  database = "cobra" # required
+ 
+   ## Retention policy to write to. Empty string writes to the default rp.
+   retention_policy = ""
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}1b7029da174e2d5bfb7bc2edf484f7df, should be {md5}d79ba482706c12e6ed2dee0f9c93f84f (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Mongodb::Server]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.70 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-mdbconfig02-ren1-pr closed.
+
+cobra-mdbshr2r1-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-mdbshr2r1-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149179'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]: Unscheduling refresh on Service[disablethp][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2017-11-10 11:00:30.704886153 +0100
++++ /tmp/user/0/puppet-file20180524-4736-yyytl3	2018-05-24 10:06:40.734680178 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+@@ -67,10 +67,10 @@
+ 
+ # Configuration vers InfluxDB
+ [[outputs.influxdb]]
+-  # Serveur InfluxDB (port 8089 pour UDP)
+-  urls = ["udp://influxdb.diag.sfr.net:8089"] # required
++  # Serveur InfluxDB (port 19002 pour UDP/db cobra)
++  urls = ["udp://influxdb.cobra.diag.sfr.net:19002"] # required
+   # Database
+-  database = "sup_diag" # required
++  database = "cobra" # required
+ 
+   ## Retention policy to write to. Empty string writes to the default rp.
+   retention_policy = ""
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}65ccb9a30f56ab79fb22b565e89af244, should be {md5}d1888d97ff808aa3a1ce7bc8704d3e82 (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Mongodb::Server]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.60 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-mdbshr2r1-ren1-pr closed.
+
+cobra-mdbshr1r2-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-mdbshr1r2-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149193'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]: Unscheduling refresh on Service[disablethp][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2017-11-10 11:17:10.276298014 +0100
++++ /tmp/user/0/puppet-file20180524-4931-t8werp	2018-05-24 10:06:44.661197523 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+@@ -67,10 +67,10 @@
+ 
+ # Configuration vers InfluxDB
+ [[outputs.influxdb]]
+-  # Serveur InfluxDB (port 8089 pour UDP)
+-  urls = ["udp://influxdb.diag.sfr.net:8089"] # required
++  # Serveur InfluxDB (port 19002 pour UDP/db cobra)
++  urls = ["udp://influxdb.cobra.diag.sfr.net:19002"] # required
+   # Database
+-  database = "sup_diag" # required
++  database = "cobra" # required
+ 
+   ## Retention policy to write to. Empty string writes to the default rp.
+   retention_policy = ""
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}d99d4fab4acce0179ac3c947504b5f40, should be {md5}9afb885a41237bb0657d35a1edbe8661 (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Mongodb::Server]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.54 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-mdbshr1r2-ren1-pr closed.
+
+cobra-mdbconfig00-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-mdbconfig00-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149196'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]: Unscheduling refresh on Service[disablethp][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2018-03-26 10:11:42.095725979 +0200
++++ /tmp/user/0/puppet-file20180524-21341-1jz7c0r	2018-05-24 10:06:45.807165022 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}67d549d9c0cc7cd3b002debc99ef86d7, should be {md5}68d76738269609c23393cd6e85289c37 (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Mongodb::Server]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.34 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-mdbconfig00-ren1-pr closed.
+
+cobra-lvs01-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-lvs01-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149179'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Finished catalog run in 1.95 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-lvs01-ren1-pr closed.
+
+cobra-mdbshr1r0-ren1-pr | SUCCESS | rc=0 >>
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for cobra-mdbshr1r0-ren1-pr.adm.pr.cobra.ren1.pfs.ld[0m
+[0;32mInfo: Applying configuration version '1527149179'[0m
+[mNotice: /Stage[init]/Apt::Update/Exec[apt_update]/returns: current_value notrun, should be 0 (noop)[0m
+[mNotice: Class[Apt::Update]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[init]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]/ensure: current_value stopped, should be running (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Mongodb::Server/Service[disablethp]: Unscheduling refresh on Service[disablethp][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: 
+--- /etc/telegraf/telegraf.conf	2018-03-26 10:39:14.484165858 +0200
++++ /tmp/user/0/puppet-file20180524-18817-1hcofdh	2018-05-24 10:06:51.689232192 +0200
+@@ -19,7 +19,7 @@
+ # Configuration for telegraf agent
+ [agent]
+   ## Default data collection interval for all inputs
+-  interval = "10s"
++  interval = "60s"
+   ## Rounds collection interval to 'interval'
+   ## ie, if interval="10s" then always collect on :00, :10, :20, etc.
+   round_interval = true
+[0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]/content: current_value {md5}437eda79642aafbe1c106deb5193a73a, should be {md5}7065ce822d0ecd5df5cb3de7299a6807 (noop)[0m
+[0;32mInfo: /Stage[main]/Cobra::Common::Telegraf/File[/etc/telegraf/telegraf.conf]: Scheduling refresh of Service[telegraf][0m
+[mNotice: /Stage[main]/Cobra::Common::Telegraf/Service[telegraf]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Class[Cobra::Common::Telegraf]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Class[Cobra::Common::Mongodb::Server]: Would have triggered 'refresh' from 1 events[0m
+[mNotice: Stage[main]: Would have triggered 'refresh' from 2 events[0m
+[mNotice: Finished catalog run in 1.49 seconds[0m
+----- WARNING -----------------------------------------------------------
+ This equipment is the property of a private company. Any unauthorized
+ connection attempt is prohibited and will result in criminal prosecution
+ under applicable criminal laws.
+----- ATTENTION ---------------------------------------------------------
+ Cet equipement est la propriete d'une compagnie privee. Toute tentative
+ d'acces sans  autorisation sur cet equipement est interdite et passible
+ d'un an de prison et de 60 000 Euros d'amende (code penal - article 323-1)
+-------------------------------------------------------------------------
+Shared connection to cobra-mdbshr1r0-ren1-pr closed.
+
