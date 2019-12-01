@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  gather_facts: False
+  serial: 1
+  name: ping 
+  remote_user: rchivate
+  become: True
+  #vars_files:
+  #  - pas.yml
+  tasks:
+     
+     - name: Pinging
+       raw: ping -c 2 {{ item }}
+       register: out2
+       with_items: [10.111.206.66,10.111.206.67,10.111.206.68,10.111.206.69,10.111.206.70,10.111.206.71]
+       register: out
+     - debug: msg=out.stdout_lines       
+     - debug: var=out2.stdout_lines

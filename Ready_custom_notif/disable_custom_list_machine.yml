@@ -11,8 +11,8 @@
      
      - name: Disable all services of host
        raw: curl -u rchivate:{{ ssh_pass }} -d "cmd_typ=29&cmd_mod=2&host={{ item }}&btnSubmit=Commit" "http://{{ inventory_hostname }}/nagios3/cgi-bin/cmd.cgi"
-       with_items: [god-vip_scheduler-vnx-pr,god-sched00-vnx-pr,god-sched01-vnx-pr,god-vip_db-vnx-pr,god-db00-vnx-pr,god-db01-vnx-pr,god-save00-vnx-pr,god-save01-vnx-pr,god-proxy02-vnx-pr,god-proxy03-vnx-pr,god-proxy04-vnx-pr,god-proxy05-vnx-pr,god-proxy06-vnx-pr,god-proxy07-vnx-pr,god-proxy08-vnx-pr,god-proxy09-vnx-pr]     
+       with_items: [adm-cacti00-bdx1-pr,adm-cacti01-bdx1-pr]     
      
      - name: Disable host notif
        raw: curl -u rchivate:{{ ssh_pass }} -d "cmd_typ=25&cmd_mod=2&host={{ item }}&btnSubmit=Commit" "http://{{ inventory_hostname }}/nagios3/cgi-bin/cmd.cgi"
-       with_items: [god-vip_scheduler-vnx-pr,god-sched00-vnx-pr,god-sched01-vnx-pr,god-vip_db-vnx-pr,god-db00-vnx-pr,god-db01-vnx-pr,god-save00-vnx-pr,god-save01-vnx-pr,god-proxy02-vnx-pr,god-proxy03-vnx-pr,god-proxy04-vnx-pr,god-proxy05-vnx-pr,god-proxy06-vnx-pr,god-proxy07-vnx-pr,god-proxy08-vnx-pr,god-proxy09-vnx-pr]
+       with_items: [adm-cacti00-bdx1-pr,adm-cacti01-bdx1-pr]

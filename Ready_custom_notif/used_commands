@@ -15,3 +15,5 @@ ansible-playbook -l site enable_custom_list_machine.yml  --ask-vault-pass -k
 Before applying the playbook change  the service name in the playbook.
 
 ansible-playbook -l lyo2 disable_custom_service.yml --ask-vault-pass -k
+
+
